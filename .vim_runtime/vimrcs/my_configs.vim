@@ -47,15 +47,6 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 " Use OSX clipboard
 set clipboard=unnamed
 
-" Ag.vim was deprecated. Use ack.vim, but still use ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep -t --smart-case'
-endif
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
 " Convert current markdown file to html and open in Safari.
 " noremap <leader>mh :w<cr><esc>:Pandoc<cr><esc>:!open -a "Google Chrome" %:p:t:r.html<cr><cr>
 noremap <leader>mh :w<cr><esc>:Pandoc<cr><esc>:!prince %:p:t:r.html %:p:t:r.pdf<cr><cr>:!open %:p:t:r.pdf<cr>
@@ -106,7 +97,6 @@ nnoremap <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 tnoremap <Esc> <C-\><C-n>
 
 "Load AutoCorrect on markdown and txt
-" autocmd filetype text call AutoCorrect()
 autocmd filetype pandoc call AutoCorrect()
 " Go back to last misspelled word and pick first suggestion.
 inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
@@ -134,3 +124,5 @@ nmap cp :let @+ = expand("%:p")<cr>
 
 " Revert hunk under cursor
 nnoremap <leader>r GitGutterRevertHunk
+
+nnoremap <leader>g :Grepper -tool git -noswitch<cr>

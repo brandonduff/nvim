@@ -16,7 +16,6 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'xolox/vim-misc'
 Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'amix/open_file_under_cursor.vim'
@@ -48,8 +47,8 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'yegappan/mru'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'lukaszkorecki/CoffeeTags'
-Plug 'mileszs/ack.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-grepper'
 call plug#end()
 
 """"""""""""""""""""""""""""""
