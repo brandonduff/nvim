@@ -34,7 +34,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'dir': '~/.config/nvim/plugged/YouCompleteMe', 'do': './install.py' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-ragtag'
 Plug 'ryanss/vim-hackernews'
